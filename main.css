@@ -1,7 +1,17 @@
 body {
+    font-family: sans-serif;
     background: #323232;
     color: #ddd;
     margin: 10px 50px;
+}
+
+a, a:visited {
+    color: #aaa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #menu {
@@ -17,7 +27,7 @@ body {
     background: #a2a2a2;
     border: 2px solid #323232;
     color: #000000;
-    margin: 15px;
+    margin: 5px;
     padding: 10px;
 }
 
