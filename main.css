@@ -1,0 +1,37 @@
+body {
+    background: #323232;
+    color: #ddd;
+    margin: 10px 50px;
+}
+
+#menu {
+    display: none;
+}
+
+#results {
+    display: none;
+}
+
+.btn {
+    border-radius: 5px;
+    background: #a2a2a2;
+    border: 2px solid #323232;
+    color: #000000;
+    margin: 15px;
+    padding: 10px;
+}
+
+.btn-blue {
+    background: #0000a2;
+    color: #ddd;
+}
+
+.btn-red {
+    background: #a20000;
+    color: #ddd;
+}
+
+.btn-green {
+    background: #007200;
+    color: #ddd;
+}
