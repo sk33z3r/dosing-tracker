@@ -121,6 +121,7 @@ var journal = (function() {
                 journalElement.appendChild(document.createElement('br'));
                 // hide the text entry form
                 textEntryElement.style.display = 'none';
+                xButton.style.display = 'none';
                 // show confirmation message
                 confirmation.style.display = 'block';
                 setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
