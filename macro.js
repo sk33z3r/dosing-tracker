@@ -111,6 +111,7 @@ var journal = (function() {
                 journalElement.appendChild(document.createElement('br'));
                 // hide the text entry form
                 textEntryElement.style.display = 'none';
+                // show confirmation message
                 confirmation.style.display = 'block';
                 setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
             }
@@ -126,44 +127,26 @@ var journal = (function() {
 
 // function to add quick timestamps
 var timestamp = function(mode) {
+    var message;
     if (mode == "comeUp") {
-        time = new Date().toLocaleTimeString();
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode(time));
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode("The come up started."));
-        journalElement.appendChild(document.createElement('br'));
-        confirmation.style.display = 'block';
-        setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
+        message = "The come up started.";
     }
     if (mode == "comeDown") {
-        time = new Date().toLocaleTimeString();
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode(time));
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode("The come down started."));
-        journalElement.appendChild(document.createElement('br'));
-        confirmation.style.display = 'block';
-        setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
+        message = "The come down started.";
     }
     if (mode == "peakStart") {
-        time = new Date().toLocaleTimeString();
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode(time));
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode("A peak started."));
-        journalElement.appendChild(document.createElement('br'));
-        confirmation.style.display = 'block';
-        setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
+        message = "A peak started.";
     }
     if (mode == "peakEnd") {
-        time = new Date().toLocaleTimeString();
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode(time));
-        journalElement.appendChild(document.createElement('br'));
-        journalElement.appendChild(document.createTextNode("A peak ended."));
-        journalElement.appendChild(document.createElement('br'));
-        confirmation.style.display = 'block';
-        setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
+        message = "A peak ended.";
     }
+    time = new Date().toLocaleTimeString();
+    journalElement.appendChild(document.createElement('br'));
+    journalElement.appendChild(document.createTextNode(time));
+    journalElement.appendChild(document.createElement('br'));
+    journalElement.appendChild(document.createTextNode(message));
+    journalElement.appendChild(document.createElement('br'));
+    // show confirmation message
+    confirmation.style.display = 'block';
+    setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
 }
