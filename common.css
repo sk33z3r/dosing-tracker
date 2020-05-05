@@ -101,7 +101,10 @@ button {
     color: #ddd;
 }
 
-/* vortex */
+/*
+vortex
+https://codepen.io/kryo2k/pen/xbxjGP
+*/
 
   .vortex {
     width: 480px;
@@ -112,6 +115,7 @@ button {
     margin-top: -240px;
     margin-left: -240px;
   }
+
   .vortex .ring {
     margin: 0 auto;
     position: absolute;
