@@ -1,28 +1,17 @@
-// function to convert seconds to a human readable format
-String.prototype.toHHMMSS = function () {
-    var sec_num = parseInt(this, 10); // don't forget the second param
-    var hours   = Math.floor(sec_num / 3600);
-    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-    var seconds = sec_num - (hours * 3600) - (minutes * 60);
-
-    if (hours   < 10) {hours   = "0"+hours;}
-    if (minutes < 10) {minutes = "0"+minutes;}
-    if (seconds < 10) {seconds = "0"+seconds;}
-    return hours+':'+minutes+':'+seconds;
-}
+// set some variables
+var startElement;
+var timerElement;
+var menuElement;
+var durationElement;
+var resultsElement;
+var dateElement;
+var journalElement;
+var dosage;
 
 // main timer function
 var timer = (function() {
     var basePeriod = 1000;
     var currentSpeed = 1;
-    var dosage;
-    var startElement;
-    var timerElement;
-    var menuElement;
-    var durationElement;
-    var resultsElement;
-    var dateElement;
-    var journalElement;
     var timeoutRef;
     var count = 0;
     var running = 0;
@@ -65,6 +54,7 @@ var timer = (function() {
                 if (timeoutRef) clearInterval(timeoutRef);
                 var date = new Date(0);
                 date.setSeconds(count);
+                // convert the seconds to ISO format
                 timeString = date.toISOString().substr(11, 8);
                 if (timerElement) {
                     // print the timestamp to the element
@@ -84,6 +74,21 @@ var timer = (function() {
             resultsElement.style.display = "block";
             // print final duration
             durationElement.appendChild(document.createTextNode(timeString));
+        }
+    }
+}());
+
+// function to add a journal entry
+var journal = (function() {
+    return {
+        text: function() {
+            // add text entry
+        },
+        voice: function() {
+            // add voice entry
+        },
+        image: function() {
+            // add image to journal
         }
     }
 }());

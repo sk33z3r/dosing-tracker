@@ -4,15 +4,14 @@
         <title>Macrodose Tracker</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="common.css">
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <script src="timer.js"></script>
+        <script src="macro.js"></script>
     </head>
     <body>
         <div class="container">
             <h1>Macrodose Tracking</h1>
             <div id="start">
-                <!-- dosage input in ug (disable start button if this is empty or <= 0) -->
                 <form name="start">
                     <label for="dosage">Dosage:</label>
                     <input type="number" id="dosage" name="dosage" min="5" max="10000" step="5" value="50" autocomplete="off"><b>&#13197;</b>
