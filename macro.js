@@ -84,26 +84,30 @@ var timer = (function() {
     }
 }());
 
-// function to add a journal entry
+// function to add journal entries
 var journal = (function() {
     return {
         text: function(mode) {
             if (mode == "new") {
+                // show the text entry form
                 textEntryElement = document.getElementById('text');
                 textEntryElement.style.display = 'block';
             }
             if (mode == "add") {
                 thought = document.forms['text'].thought.value;
+                // if the field is empty, throw a warning
                 if (thought === "") {
                     alert("Text box can't be empty!");
                     process.exit(1);
                 }
+                // print the entry to the journal
                 textStamp = new Date().toLocaleTimeString();
                 journalElement.appendChild(document.createElement('br'));
                 journalElement.appendChild(document.createTextNode(textStamp));
                 journalElement.appendChild(document.createElement('br'));
                 journalElement.appendChild(document.createTextNode(thought));
                 journalElement.appendChild(document.createElement('br'));
+                // hide the text entry form
                 textEntryElement.style.display = 'none';
             }
         },
