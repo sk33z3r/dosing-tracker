@@ -5,14 +5,16 @@ https://codepen.io/kryo2k/pen/xbxjGP
 .vortex {
     width: 480px;
     height: 480px;
-    position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -240px;
     margin-left: -240px;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
 }
 
-.vortex .ring {
+.ring {
     margin: 0 auto;
     position: absolute;
     text-align: center;

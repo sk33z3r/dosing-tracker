@@ -3,7 +3,10 @@ body {
     font-size: 14pt;
     background: #323232;
     color: #ddd;
-    margin: 10px 50px;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 3px 3px 3px #000;
 }
 
 a, a:visited {
@@ -16,16 +19,20 @@ a:hover {
 }
 
 input, textarea {
-    margin: 0px;
     padding: 5px;
     background: #aaa;
     color: #323232;
-    border: none;
+    border: 2px solid #323232;
     border-radius: 5px;
 }
 
+input {
+    margin: 0;
+}
+
 textarea {
-    margin: 10px;
+    margin: 10px auto;
+    width: 90%;
 }
 
 button {
@@ -38,12 +45,41 @@ button {
     font-size: 12pt;
 }
 
+.btn-blue {
+    background: #0000a2;
+    color: #ddd;
+}
+
+.btn-red {
+    background: #a20000;
+    color: #ddd;
+}
+
+.btn-green {
+    background: #007200;
+    color: #ddd;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+    overflow: auto;
+}
+
 .subContainer {
-    background: #000000;
+    background: #00000055;
     border-radius: 5px;
     padding: 5px 10px;
-    width: 350px;
-    margin: 10px 0px;
+    margin: 0 auto;
+}
+
+.buttons {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.left {
+    text-align: left;
 }
 
 #dosage {
@@ -75,7 +111,13 @@ button {
     display: none;
 }
 
+#duration {
+    margin: 5px;
+    font-size: 34pt;
+}
+
 #confirmation {
+    margin: 0 auto;
     display: none;
     background: #000000;
     color: #007200;
@@ -84,19 +126,4 @@ button {
     width: 350px;
     padding: 5px 10px;
     text-align: center;
-}
-
-.btn-blue {
-    background: #0000a2;
-    color: #ddd;
-}
-
-.btn-red {
-    background: #a20000;
-    color: #ddd;
-}
-
-.btn-green {
-    background: #007200;
-    color: #ddd;
 }

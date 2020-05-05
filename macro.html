@@ -11,38 +11,6 @@
     </head>
     <body>
         <div class="container">
-            <div class="vortex">
-                <div class="ring el-1"></div>
-                <div class="ring el-2"></div>
-                <div class="ring el-3"></div>
-                <div class="ring el-4"></div>
-                <div class="ring el-5"></div>
-                <div class="ring el-6"></div>
-                <div class="ring el-7"></div>
-                <div class="ring el-8"></div>
-                <div class="ring el-9"></div>
-                <div class="ring el-10"></div>
-                <div class="ring el-11"></div>
-                <div class="ring el-12"></div>
-                <div class="ring el-13"></div>
-                <div class="ring el-14"></div>
-                <div class="ring el-15"></div>
-                <div class="ring el-16"></div>
-                <div class="ring el-17"></div>
-                <div class="ring el-18"></div>
-                <div class="ring el-19"></div>
-                <div class="ring el-20"></div>
-                <div class="ring el-21"></div>
-                <div class="ring el-22"></div>
-                <div class="ring el-23"></div>
-                <div class="ring el-24"></div>
-                <div class="ring el-25"></div>
-                <div class="ring el-26"></div>
-                <div class="ring el-27"></div>
-                <div class="ring el-28"></div>
-                <div class="ring el-29"></div>
-                <div class="ring el-30"></div>
-            </div>
             <h1>Macrodose Tracking</h1>
             <div id="start">
                 <form name="start">
@@ -57,13 +25,13 @@
                     Elapsed Time: <button type="button" class="btn-blue" id="timer"></button>
                 </p>
                 <p>
-                    <h4>Add Journal Entries</h4>
+                    <h4 class="left">Add Journal Entries</h4>
                     <button type="button" onClick="journal.text('new');">Text</button>
                     <button type="button" onClick="journal.voice();">Voice</button>
                     <button type="button" onClick="journal.image();">Image</button>
                     <button type="button" id="clear" class="btn-red" onClick="hideEntryElements();">X</button>
                     <form name="text" id="text" class="subContainer">
-                        <textarea name="thought" placeholder="Write down a thought" required="true" rows="5" cols="35" autocomplete="off"></textarea><br />
+                        <textarea name="thought" placeholder="Write down a thought" required="true" rows="5" autocomplete="off"></textarea><br />
                         <button type="button" onClick="journal.text('add');">Submit Entry</button>
                     </form>
                     <div id="voice" class="subContainer">
@@ -74,7 +42,7 @@
                     </div>
                 </p>
                 <p>
-                    <h4>Quick Timestamps</h4>
+                    <h4 class="left">Quick Timestamps</h4>
                     <button type="button" onClick="timestamp('comeUp');">Come Up</button>
                     <button type="button" onClick="timestamp('peakStart');">Peak Start</button>
                     <button type="button" onClick="timestamp('peakEnd');">Peak End</button>
@@ -83,14 +51,48 @@
                 <p id="confirmation">Journal Entry Added!</p>
             </div>
             <div id="results">
-                <h2>Total Trip Length</h2>
-                <h3 id="duration"></h3>
+                <h3>Total Trip Length</h2>
+                <h1 id="duration"></h3>
                 <br />
-                <h2>Journal</h2>
-                <h4 id="date"></h4>
-                <p id="journal"></p>
-                <button type="button" class="btn-blue" onClick="location.reload(); return false;">Reset Tracker</button>
+                <div class="left subContainer">
+                    <h2>Journal</h2>
+                    <h4 id="date"></h4>
+                    <p id="journal"></p>
+                    <button type="button" class="btn-blue" onClick="location.reload(); return false;">Reset Tracker</button>
+                </div>
             </div>
+        </div>
+        <div class="vortex">
+            <div class="ring el-1"></div>
+            <div class="ring el-2"></div>
+            <div class="ring el-3"></div>
+            <div class="ring el-4"></div>
+            <div class="ring el-5"></div>
+            <div class="ring el-6"></div>
+            <div class="ring el-7"></div>
+            <div class="ring el-8"></div>
+            <div class="ring el-9"></div>
+            <div class="ring el-10"></div>
+            <div class="ring el-11"></div>
+            <div class="ring el-12"></div>
+            <div class="ring el-13"></div>
+            <div class="ring el-14"></div>
+            <div class="ring el-15"></div>
+            <div class="ring el-16"></div>
+            <div class="ring el-17"></div>
+            <div class="ring el-18"></div>
+            <div class="ring el-19"></div>
+            <div class="ring el-20"></div>
+            <div class="ring el-21"></div>
+            <div class="ring el-22"></div>
+            <div class="ring el-23"></div>
+            <div class="ring el-24"></div>
+            <div class="ring el-25"></div>
+            <div class="ring el-26"></div>
+            <div class="ring el-27"></div>
+            <div class="ring el-28"></div>
+            <div class="ring el-29"></div>
+            <div class="ring el-30"></div>
         </div>
     </body>
 </html>
