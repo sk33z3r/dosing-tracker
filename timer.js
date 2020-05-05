@@ -23,7 +23,7 @@ var timer = (function() {
     var timeString;
     return {
         start : function() {
-            if (document.forms['dose'].dosage.value === "") {
+            if (document.forms['start'].dosage.value === "") {
                 alert("Dosage can't be empty!");
                 process.exit(1);
             }
