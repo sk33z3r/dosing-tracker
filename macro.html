@@ -35,10 +35,12 @@
                 </p>
                 <p>
                     <h4>Create Timestamps</h4>
-                    <button type="button">Come Up</button>
-                    <button type="button">Peak</button>
-                    <button type="button">Come Down</button>
+                    <button type="button" onClick="timestamp('comeUp');">Come Up</button>
+                    <button type="button" onClick="timestamp('peakStart');">Peak Start</button>
+                    <button type="button" onClick="timestamp('peakEnd');">Peak End</button>
+                    <button type="button" onClick="timestamp('comeDown');">Come Down</button>
                 </p>
+                <p id="confirmation">Journal Entry Added!</p>
             </div>
             <div id="results">
                 <h2>Total Trip Length</h2>

@@ -53,6 +53,17 @@ button {
     display: none;
 }
 
+#confirmation {
+    display: none;
+    background: #000000;
+    color: #007200;
+    text-decoration: bold;
+    border-radius: 5px;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+}
+
 .btn-blue {
     background: #0000a2;
     color: #ddd;
