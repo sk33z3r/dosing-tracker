@@ -23,6 +23,15 @@ input {
     border-radius: 5px;
 }
 
+button {
+    border-radius: 5px;
+    background: #a2a2a2;
+    border: 2px solid #323232;
+    color: #000000;
+    margin: 5px;
+    padding: 10px;
+}
+
 #dosage {
     margin: 0 5px;
     width: 75px;
@@ -34,15 +43,6 @@ input {
 
 #results {
     display: none;
-}
-
-.btn {
-    border-radius: 5px;
-    background: #a2a2a2;
-    border: 2px solid #323232;
-    color: #000000;
-    margin: 5px;
-    padding: 10px;
 }
 
 .btn-blue {

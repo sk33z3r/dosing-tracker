@@ -15,25 +15,26 @@
                 <!-- dosage input in ug (disable start button if this is empty or <= 0) -->
                 <form name="start">
                     <label for="dosage">Dosage:</label>
-                    <input type="number" id="dosage" name="dosage" min="1" max="10000" placeholder="1-10000" autocomplete="off"><b>&#13197;</b>
-                    <button type="button" class="btn btn-green" onClick="timer.start();">Start Timer</button>
+                    <input type="number" id="dosage" name="dosage" min="5" max="10000" step="5" value="50" autocomplete="off"><b>&#13197;</b>
+                    <button type="button" class="btn-green" onClick="timer.start();">Start Timer</button>
                 </form>
             </div>
             <div id="menu">
                 <p>
-                    <button type="button" class="btn btn-red" onClick="timer.stop();">Stop Trip</button>
-                    Elapsed Time: <button type="button" class="btn btn-blue" id="timer"></button>
+                    <button type="button" class="btn-red" onClick="timer.stop();">Stop Trip</button>
+                    Elapsed Time: <button type="button" class="btn-blue" id="timer"></button>
                 </p>
                 <p>
                     <h4>Add Journal Entry</h4>
-                    <button type="button" class="btn">Text</button>
-                    <button type="button" class="btn">Voice</button>
+                    <button type="button">Text</button>
+                    <button type="button">Voice</button>
+                    <button type="button">Image</button>
                 </p>
                 <p>
                     <h4>Create Timestamps</h4>
-                    <button type="button" class="btn">Come Up</button>
-                    <button type="button" class="btn">Peak</button>
-                    <button type="button" class="btn">Come Down</button>
+                    <button type="button">Come Up</button>
+                    <button type="button">Peak</button>
+                    <button type="button">Come Down</button>
                 </p>
             </div>
             <div id="results">
@@ -43,7 +44,7 @@
                 <h2>Journal</h2>
                 <h4 id="date"></h4>
                 <p id="journal"></p>
-                <button type="button" class="btn btn-blue" onClick="location.reload(); return false;">Reset Tracker</button>
+                <button type="button" class="btn-blue" onClick="location.reload(); return false;">Reset Tracker</button>
             </div>
         </div>
     </body>
