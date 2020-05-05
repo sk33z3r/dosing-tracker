@@ -25,9 +25,13 @@
                 </p>
                 <p>
                     <h4>Add Journal Entry</h4>
-                    <button type="button">Text</button>
+                    <button type="button" onClick="journal.text('new');">Text</button>
                     <button type="button">Voice</button>
                     <button type="button">Image</button>
+                    <form name="text" id="text">
+                        <textarea name="thought" placeholder="Write down a thought" required="true" rows="5" cols="35" autocomplete="off"></textarea><br />
+                        <button type="button" onClick="journal.text('add');">Submit Entry</button>
+                    </form>
                 </p>
                 <p>
                     <h4>Create Timestamps</h4>

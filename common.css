@@ -14,13 +14,17 @@ a:hover {
     text-decoration: underline;
 }
 
-input {
+input, textarea {
     margin: 0px;
     padding: 5px;
     background: #aaa;
     color: #323232;
     border: none;
     border-radius: 5px;
+}
+
+textarea {
+    margin: 10px;
 }
 
 button {
@@ -38,6 +42,10 @@ button {
 }
 
 #menu {
+    display: none;
+}
+
+#text {
     display: none;
 }
 

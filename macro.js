@@ -6,6 +6,7 @@ var durationElement;
 var resultsElement;
 var dateElement;
 var journalElement;
+var textEntryElement;
 var dosage;
 
 // main timer function
@@ -18,7 +19,7 @@ var timer = (function() {
     var timeString;
     return {
         // initialize everything
-        start : function() {
+        start: function() {
             // first set the dosage var
             dosage = document.forms['start'].dosage.value;
             // if the var is empty, then the field is empty and we should exit
@@ -35,6 +36,7 @@ var timer = (function() {
             resultsElement = document.getElementById('results');
             dateElement = document.getElementById('date');
             journalElement = document.getElementById('journal');
+            // enable the timer
             running = 1;
             // change the UI elements
             startElement.style.display = "none";
@@ -44,8 +46,12 @@ var timer = (function() {
             today = today.toLocaleString('default', { month: 'long' }) + ' ' + String(today.getDate()).padStart(2, '0') + ', ' + today.getFullYear();
             dateElement.appendChild(document.createTextNode(today));
             // set the first journal timestamp for the dosage
-            doseStamp = new Date().toLocaleTimeString() + ' - Ingested a ' + dosage + 'ug dose';
+            doseStamp = new Date().toLocaleTimeString();
+            doseNote = "Ingested a " + dosage + "ug dose";
             journalElement.appendChild(document.createTextNode(doseStamp));
+            journalElement.appendChild(document.createElement('br'));
+            journalElement.appendChild(document.createTextNode(doseNote));
+            journalElement.appendChild(document.createElement('br'));
             // start the timer
             timer.run();
         },
@@ -81,8 +87,25 @@ var timer = (function() {
 // function to add a journal entry
 var journal = (function() {
     return {
-        text: function() {
-            // add text entry
+        text: function(mode) {
+            if (mode == "new") {
+                textEntryElement = document.getElementById('text');
+                textEntryElement.style.display = 'block';
+            }
+            if (mode == "add") {
+                thought = document.forms['text'].thought.value;
+                if (thought === "") {
+                    alert("Text box can't be empty!");
+                    process.exit(1);
+                }
+                textStamp = new Date().toLocaleTimeString();
+                journalElement.appendChild(document.createElement('br'));
+                journalElement.appendChild(document.createTextNode(textStamp));
+                journalElement.appendChild(document.createElement('br'));
+                journalElement.appendChild(document.createTextNode(thought));
+                journalElement.appendChild(document.createElement('br'));
+                textEntryElement.style.display = 'none';
+            }
         },
         voice: function() {
             // add voice entry
