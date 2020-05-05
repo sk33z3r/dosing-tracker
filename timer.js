@@ -23,15 +23,21 @@ var timer = (function() {
     var timeString;
     return {
         start : function() {
+            if (document.forms['dose'].dosage.value === "") {
+                alert("Dosage can't be empty!");
+                process.exit(1);
+            }
             currentSpeed = 1;
-            startBtn = document.getElementById('start');
+            startElement = document.getElementById('start');
             timerElement = document.getElementById('timer');
             menuElement = document.getElementById('menu');
             durationElement = document.getElementById('duration');
             resultsElement = document.getElementById('results');
             running = 1;
-            startBtn.style.display = "none";
+            startElement.style.display = "none";
             menuElement.style.display = "block";
+            //set date and print html
+            //set dosage and append first journal timestamp
             timer.run();
         },
         run: function() {
