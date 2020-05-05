@@ -36,6 +36,14 @@ button {
     padding: 10px;
 }
 
+.subContainer {
+    background: #000000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 350px;
+    margin: 10px 0px;
+}
+
 #dosage {
     margin: 0 5px;
     width: 75px;
@@ -53,14 +61,26 @@ button {
     display: none;
 }
 
+#voice {
+    display: none;
+}
+
+#image {
+    display: none;
+}
+
+#clear {
+    display: none;
+}
+
 #confirmation {
     display: none;
     background: #000000;
     color: #007200;
     text-decoration: bold;
     border-radius: 5px;
-    width: 200px;
-    padding: 5px;
+    width: 350px;
+    padding: 5px 10px;
     text-align: center;
 }
 

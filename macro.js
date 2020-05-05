@@ -7,6 +7,9 @@ var resultsElement;
 var dateElement;
 var journalElement;
 var textEntryElement;
+var voiceEntryElement;
+var imageEntryElement;
+var xButton;
 var confirmation;
 var dosage;
 
@@ -37,6 +40,10 @@ var timer = (function() {
             resultsElement = document.getElementById('results');
             dateElement = document.getElementById('date');
             journalElement = document.getElementById('journal');
+            textEntryElement = document.getElementById('text');
+            voiceEntryElement = document.getElementById('voice');
+            imageEntryElement = document.getElementById('image');
+            xButton = document.getElementById('clear');
             confirmation = document.getElementById('confirmation');
             // enable the timer
             running = 1;
@@ -92,8 +99,11 @@ var journal = (function() {
         text: function(mode) {
             if (mode == "new") {
                 // show the text entry form
-                textEntryElement = document.getElementById('text');
                 textEntryElement.style.display = 'block';
+                xButton.style.display = 'inline';
+                // hide the other entry forms if they're visible
+                voiceEntryElement.style.display = 'none';
+                imageEntryElement.style.display = 'none';
             }
             if (mode == "add") {
                 thought = document.forms['text'].thought.value;
@@ -118,15 +128,34 @@ var journal = (function() {
         },
         voice: function() {
             // TODO: add voice entry
+            voiceEntryElement.style.display = 'block';
+            xButton.style.display = 'inline';
+            // hide the other entry forms if they're visible
+            textEntryElement.style.display = 'none';
+            imageEntryElement.style.display = 'none';
         },
         image: function() {
             // TODO: add image to journal
+            imageEntryElement.style.display = 'block';
+            xButton.style.display = 'inline';
+            // hide the other entry forms if they're visible
+            voiceEntryElement.style.display = 'none';
+            textEntryElement.style.display = 'none';
         }
     }
 }());
 
+// function to hide the journal entry elements
+var hideEntryElements = function() {
+    voiceEntryElement.style.display = 'none';
+    textEntryElement.style.display = 'none';
+    imageEntryElement.style.display = 'none';
+    xButton.style.display = 'none';
+}
+
 // function to add quick timestamps
 var timestamp = function(mode) {
+    // set the entry message
     var message;
     if (mode == "comeUp") {
         message = "The come up started.";

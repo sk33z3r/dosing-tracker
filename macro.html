@@ -24,17 +24,24 @@
                     Elapsed Time: <button type="button" class="btn-blue" id="timer"></button>
                 </p>
                 <p>
-                    <h4>Add Journal Entry</h4>
+                    <h4>Add Journal Entries</h4>
                     <button type="button" onClick="journal.text('new');">Text</button>
-                    <button type="button">Voice</button>
-                    <button type="button">Image</button>
-                    <form name="text" id="text">
+                    <button type="button" onClick="journal.voice();">Voice</button>
+                    <button type="button" onClick="journal.image();">Image</button>
+                    <button type="button" id="clear" class="btn-red" onClick="hideEntryElements();">X</button>
+                    <form name="text" id="text" class="subContainer">
                         <textarea name="thought" placeholder="Write down a thought" required="true" rows="5" cols="35" autocomplete="off"></textarea><br />
                         <button type="button" onClick="journal.text('add');">Submit Entry</button>
                     </form>
+                    <div id="voice" class="subContainer">
+                        <p>Voice Recorder Script Here</p>
+                    </div>
+                    <div id="image" class="subContainer">
+                        <p>Image Upload / Capture Script Here</p>
+                    </div>
                 </p>
                 <p>
-                    <h4>Create Timestamps</h4>
+                    <h4>Quick Timestamps</h4>
                     <button type="button" onClick="timestamp('comeUp');">Come Up</button>
                     <button type="button" onClick="timestamp('peakStart');">Peak Start</button>
                     <button type="button" onClick="timestamp('peakEnd');">Peak End</button>
