@@ -61,16 +61,18 @@
                 </p>
                 <p id="confirmation">Journal Entry Added!</p>
             </div>
-            <div id="results">
-                <h3>Total Trip Length</h2>
-                <h1 id="duration"></h3>
+            <div class="left" id="results">
+                <div class="center">
+                    <h3>Total Trip Length</h2>
+                    <h1 id="duration"></h3>
+                </div>
                 <br />
-                <div class="left subContainer">
-                    <h2>Journal</h2>
+                <h2>Journal</h2>
+                <div id="journal" class="subContainer">
                     <h4 id="date"></h4>
                     <p id="journal"></p>
-                    <button type="button" class="btn-blue" onClick="location.reload(); return false;">Reset Tracker</button>
                 </div>
+                <button type="button" class="btn-blue" onClick="location.reload(); return false;">Reset Tracker</button>
             </div>
         </div>
         <iframe src="triangles.html" id="triangles"></iframe>

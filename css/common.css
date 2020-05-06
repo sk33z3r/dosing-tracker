@@ -99,6 +99,10 @@ button:hover {
     text-align: left;
 }
 
+.center {
+    text-align: center;
+}
+
 .paused {
     -webkit-animation-play-state:paused;
     -moz-animation-play-state:paused;
@@ -147,4 +151,10 @@ button:hover {
     width: 350px;
     padding: 5px 10px;
     text-align: center;
+}
+
+#journal {
+    margin-bottom: 15px;
+    max-height: 400px;
+    overflow: auto;
 }
