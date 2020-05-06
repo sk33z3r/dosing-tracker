@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    font-size: 14pt;
+    background: #1d2021;
+    color: #a89984;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 3px 3px 3px #1d2021;
+}
+
+a, a:visited {
+    color: #aaa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, textarea {
+    padding: 5px;
+    background: #a89984;
+    color: #1d2021;
+    border: 2px solid #1d2021;
+    border-radius: 5px;
+}
+
+input {
+    margin: 0;
+}
+
+textarea {
+    margin: 10px auto;
+    width: 90%;
+}
+
+button {
+    border-radius: 5px;
+    background: #7c6f64;
+    border: 2px solid #1d2021;
+    color: #1d2021;
+    margin: 5px;
+    padding: 10px;
+    font-size: 12pt;
+}
+
+button:hover {
+    background: #a89984;
+}
+
+.btn-blue {
+    background: #458588;
+    color: #1d2021;
+}
+
+.btn-blue:hover {
+    background: #83a598;
+}
+
+.btn-red {
+    background: #cc241d;
+    color: #1d2021;
+}
+
+.btn-red:hover {
+    background: #fb4934;
+}
+
+.btn-green {
+    background: #98971a;
+    color: #1d2021;
+}
+
+.btn-green:hover {
+    background: #b8bb26;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+    overflow: auto;
+}
+
+.subContainer {
+    background: #1d202177;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    color: #a89984;
+}
+
+.buttons {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.left {
+    text-align: left;
+}
+
+.paused {
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+}
+
+#triangles {
+    overflow: hidden;
+    margin: 0;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#dosage {
+    margin: 0 5px;
+    width: 75px;
+}
+
+#selection {
+    margin: 0 auto;
+}
+
+/* some containers should be hidden until javascript needs them */
+#menu, #text, #results, #voice, #image, #clear, #lsdStart, #mushyStart {
+    display: none;
+}
+
+#duration {
+    margin: 5px;
+    font-size: 34pt;
+}
+
+#confirmation {
+    margin: 0 auto;
+    display: none;
+    background: #98971a77;
+    color: #1d2021;
+    text-decoration: bold;
+    border-radius: 5px;
+    width: 350px;
+    padding: 5px 10px;
+    text-align: center;
+}

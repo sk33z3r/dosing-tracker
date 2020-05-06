@@ -1,0 +1,172 @@
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    background: #1d2021;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, right top, left top, from(#3c3836), to(#1d2021));
+    background: linear-gradient(to left, #3c3836, #1d2021);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.triangle-canvas {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.triangle {
+    fill: none;
+    stroke: #d79921;
+    stroke-width: 15;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation: triangle-animation 10s linear infinite;
+    animation: triangle-animation 10s linear infinite;
+}
+
+.triangle-1 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.triangle-2 {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.triangle-3 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.triangle-4 {
+    -webkit-animation-delay: -1.5s;
+    animation-delay: -1.5s;
+}
+
+.triangle-5 {
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+.triangle-6 {
+    -webkit-animation-delay: -2.5s;
+    animation-delay: -2.5s;
+}
+
+.triangle-7 {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s;
+}
+
+.triangle-8 {
+    -webkit-animation-delay: -3.5s;
+    animation-delay: -3.5s;
+}
+
+.triangle-9 {
+    -webkit-animation-delay: -4s;
+    animation-delay: -4s;
+}
+
+.triangle-10 {
+    -webkit-animation-delay: -4.5s;
+    animation-delay: -4.5s;
+}
+
+.triangle-11 {
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
+}
+
+.triangle-12 {
+    -webkit-animation-delay: -5.5s;
+    animation-delay: -5.5s;
+}
+
+.triangle-13 {
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+}
+
+.triangle-14 {
+    -webkit-animation-delay: -6.5s;
+    animation-delay: -6.5s;
+}
+
+.triangle-15 {
+    -webkit-animation-delay: -7s;
+    animation-delay: -7s;
+}
+
+.triangle-16 {
+    -webkit-animation-delay: -7.5s;
+    animation-delay: -7.5s;
+}
+
+.triangle-17 {
+    -webkit-animation-delay: -8s;
+    animation-delay: -8s;
+}
+
+.triangle-18 {
+    -webkit-animation-delay: -8.5s;
+    animation-delay: -8.5s;
+}
+
+.triangle-19 {
+    -webkit-animation-delay: -9s;
+    animation-delay: -9s;
+}
+
+.triangle-20 {
+    -webkit-animation-delay: -9.5s;
+    animation-delay: -9.5s;
+}
+
+@-webkit-keyframes triangle-animation {
+    0% {
+        -webkit-transform: scale(0) rotate(0deg);
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(3) rotate(45deg);
+        transform: scale(3) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes triangle-animation {
+    0% {
+        -webkit-transform: scale(0) rotate(0deg);
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(3) rotate(45deg);
+        transform: scale(3) rotate(45deg);
+        opacity: 0;
+    }
+}

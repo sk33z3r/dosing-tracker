@@ -1,4 +1,5 @@
 // set some variables
+var selectionElement;
 var startElement;
 var timerElement;
 var menuElement;
@@ -13,6 +14,40 @@ var xButton;
 var confirmation;
 var dosage;
 
+var initPage = function() {
+    selectionElement = document.getElementById('selection');
+    timerElement = document.getElementById('timer');
+    menuElement = document.getElementById('menu');
+    durationElement = document.getElementById('duration');
+    resultsElement = document.getElementById('results');
+    dateElement = document.getElementById('date');
+    journalElement = document.getElementById('journal');
+    textEntryElement = document.getElementById('text');
+    voiceEntryElement = document.getElementById('voice');
+    imageEntryElement = document.getElementById('image');
+    xButton = document.getElementById('clear');
+    confirmation = document.getElementById('confirmation');
+    lsdStartElement = document.getElementById('lsdStart');
+    mushyStartElement = document.getElementById('mushyStart');
+}
+
+var showStart = function (type) {
+    selectionElement.style.display = 'none';
+    if (type === "lsd") {
+        lsdStartElement.style.display = 'block';
+        name = "Lysergic Acid Diethylamide";
+    }
+    if (type === "mushy") {
+        mushyStartElement.style.display = 'block';
+        name = "Psilocybin Cubensis";
+    }
+    // set the journal date
+    today = new Date();
+    today = today.toLocaleString('default', { month: 'long' }) + ' ' + String(today.getDate()).padStart(2, '0') + ', ' + today.getFullYear();
+    header = today + ' - ' + name;
+    dateElement.appendChild(document.createTextNode(header));
+}
+
 // main timer function
 var timer = (function() {
     var basePeriod = 1000;
@@ -22,41 +57,36 @@ var timer = (function() {
     var running = 0;
     var timeString;
     return {
-        // initialize everything
-        start: function() {
-            // first set the dosage var
-            dosage = document.forms['start'].dosage.value;
+        start: function(type) {
+            // setup the environment based on type
+            if (type === "lsd") {
+                dosage = document.forms['lsdStart'].dosage.value;
+                doseStamp = new Date().toLocaleTimeString();
+                doseNote = "Ingested a " + dosage + "ug dose";
+                startElement = lsdStartElement;
+            }
+            if (type === "mushy") {
+                dosage = document.forms['mushyStart'].dosage.value;
+                doseStamp = new Date().toLocaleTimeString();
+                doseNote = "Ingested a " + dosage + "mg dose";
+                if (dosage == 5000) {
+                    doseNote += ' (the "Heroic Dose")';
+                }
+                startElement = mushyStartElement;
+            }
             // if the var is empty, then the field is empty and we should exit
             if (dosage === "") {
                 alert("Dosage can't be empty!");
                 process.exit(1);
             }
-            // define some basics
+            // set the speed modifier
             currentSpeed = 1;
-            startElement = document.getElementById('start');
-            timerElement = document.getElementById('timer');
-            menuElement = document.getElementById('menu');
-            durationElement = document.getElementById('duration');
-            resultsElement = document.getElementById('results');
-            dateElement = document.getElementById('date');
-            journalElement = document.getElementById('journal');
-            textEntryElement = document.getElementById('text');
-            voiceEntryElement = document.getElementById('voice');
-            imageEntryElement = document.getElementById('image');
-            xButton = document.getElementById('clear');
-            confirmation = document.getElementById('confirmation');
             // enable the timer
             running = 1;
             // change the UI elements
             startElement.style.display = "none";
             menuElement.style.display = "block";
-            // set the journal date
-            today = new Date();
-            today = today.toLocaleString('default', { month: 'long' }) + ' ' + String(today.getDate()).padStart(2, '0') + ', ' + today.getFullYear();
-            dateElement.appendChild(document.createTextNode(today));
             // set the first journal timestamp for the dosage
-            doseStamp = new Date().toLocaleTimeString();
-            doseNote = "Ingested a " + dosage + "ug dose";
             journalElement.appendChild(document.createTextNode(doseStamp));
             journalElement.appendChild(document.createElement('br'));
             journalElement.appendChild(document.createTextNode(doseNote));

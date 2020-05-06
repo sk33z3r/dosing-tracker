@@ -4,19 +4,30 @@
         <title>Macrodose Tracker</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="vortex.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/vortex.css">
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <script src="macro.js"></script>
+        <script src="js/macro.js"></script>
     </head>
-    <body>
+    <body onLoad="initPage();">
         <div class="container">
             <h1>Macrodose Tracking</h1>
-            <div id="start">
-                <form name="start">
+            <div id ="selection">
+                <button type="button" onClick="showStart('mushy');">Psilocybin Cubensis</button>
+                <button type="button" onClick="showStart('lsd');">Lysergic Acid Diethylamide</button>
+            </div>
+            <div id="lsdStart">
+                <form name="lsdStart">
                     <label for="dosage">Dosage:</label>
-                    <input type="number" id="dosage" name="dosage" min="5" max="10000" step="5" value="50" autocomplete="off"><b>&#13197;</b>
-                    <button type="button" class="btn-green" onClick="timer.start();">Start Timer</button>
+                    <input type="number" id="dosage" name="dosage" min="5" max="10000" step="5" value="50" autocomplete="off"><b>&micro;g</b>
+                    <button type="button" class="btn-green" onClick="timer.start('lsd');">Start Timer</button>
+                </form>
+            </div>
+            <div id="mushyStart">
+                <form name="mushyStart">
+                    <label for="dosage">Dosage:</label>
+                    <input type="number" id="dosage" name="dosage" min="100" max="20000" step="50" value="3500" autocomplete="off"><b>mg</b>
+                    <button type="button" class="btn-green" onClick="timer.start('mushy');">Start Timer</button>
                 </form>
             </div>
             <div id="menu">
@@ -62,37 +73,6 @@
                 </div>
             </div>
         </div>
-        <div class="vortex">
-            <div class="ring el-1"></div>
-            <div class="ring el-2"></div>
-            <div class="ring el-3"></div>
-            <div class="ring el-4"></div>
-            <div class="ring el-5"></div>
-            <div class="ring el-6"></div>
-            <div class="ring el-7"></div>
-            <div class="ring el-8"></div>
-            <div class="ring el-9"></div>
-            <div class="ring el-10"></div>
-            <div class="ring el-11"></div>
-            <div class="ring el-12"></div>
-            <div class="ring el-13"></div>
-            <div class="ring el-14"></div>
-            <div class="ring el-15"></div>
-            <div class="ring el-16"></div>
-            <div class="ring el-17"></div>
-            <div class="ring el-18"></div>
-            <div class="ring el-19"></div>
-            <div class="ring el-20"></div>
-            <div class="ring el-21"></div>
-            <div class="ring el-22"></div>
-            <div class="ring el-23"></div>
-            <div class="ring el-24"></div>
-            <div class="ring el-25"></div>
-            <div class="ring el-26"></div>
-            <div class="ring el-27"></div>
-            <div class="ring el-28"></div>
-            <div class="ring el-29"></div>
-            <div class="ring el-30"></div>
-        </div>
+        <iframe src="triangles.html" id="triangles"></iframe>
     </body>
 </html>
