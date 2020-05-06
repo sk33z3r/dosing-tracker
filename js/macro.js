@@ -164,6 +164,7 @@ var journal = (function() {
             // hide the other entry forms if they're visible
             textEntryElement.style.display = 'none';
             imageEntryElement.style.display = 'none';
+            // https://webaudiodemos.appspot.com/AudioRecorder/index.html#
         },
         image: function() {
             // TODO: add image to journal
@@ -172,6 +173,7 @@ var journal = (function() {
             // hide the other entry forms if they're visible
             voiceEntryElement.style.display = 'none';
             textEntryElement.style.display = 'none';
+            // https://jsfiddle.net/dannymarkov/cuumwch5/
         }
     }
 }());
