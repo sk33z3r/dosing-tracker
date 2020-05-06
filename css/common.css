@@ -45,7 +45,7 @@ button {
     font-size: 12pt;
 }
 
-button:hover {
+button:hover, button:active, button:focus {
     background: #a89984;
 }
 
@@ -54,7 +54,7 @@ button:hover {
     color: #1d2021;
 }
 
-.btn-blue:hover {
+.btn-blue:hover, .btn-blue:active, .btn-blue:focus {
     background: #83a598;
 }
 
@@ -63,7 +63,7 @@ button:hover {
     color: #1d2021;
 }
 
-.btn-red:hover {
+.btn-red:hover, .btn-red:active, .btn-red:focus {
     background: #fb4934;
 }
 
@@ -72,7 +72,7 @@ button:hover {
     color: #1d2021;
 }
 
-.btn-green:hover {
+.btn-green:hover, .btn-green:active, .btn-green:focus {
     background: #b8bb26;
 }
 
