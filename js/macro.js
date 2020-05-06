@@ -212,3 +212,8 @@ var timestamp = function(mode) {
     confirmation.style.display = 'block';
     setTimeout(() => { confirmation.style.display = 'none'; }, 3600);
 }
+
+// function to save the journal
+var saveJournal = function() {
+    alert("This doesn't function yet!");
+}
