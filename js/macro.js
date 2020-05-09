@@ -216,4 +216,6 @@ var timestamp = function(mode) {
 // function to save the journal
 var saveJournal = function() {
     alert("This doesn't function yet!");
+    // save for later recall
+    // download to specified location
 }
